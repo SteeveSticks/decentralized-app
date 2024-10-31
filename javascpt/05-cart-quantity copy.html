@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Cart Quantity</p>
+
+  <button onclick="
+   updateCartQauntity(0);
+    
+  ">Show Quantity</button>
+  <button onclick="
+   updateCartQauntity(1);
+  ">Add to Cart</button>
+
+  <button onclick="
+    updateCartQauntity(2);
+  ">+2</button>
+
+  <button onclick="
+    updateCartQauntity(3);
+  ">+3</button>
+
+  <button onclick="
+    cartQuantity = 0;
+    console.log('cart was Reset');
+    console.log(`cartQuantity: ${cartQuantity}`);
+    
+    
+  ">Reset cart</button>
+
+  <button onclick="
+    updateCartQauntity(4);
+  ">+4</button>
+
+  <button onclick="
+   updateCartQauntity(5);
+  ">+5</button>
+
+  <button onclick="
+   updateCartQauntity(-1);
+  ">Remove from cart</button>
+
+  <button onclick="
+    updateCartQauntity(-2);
+  ">-2</button>
+
+  <button onclick="
+   updateCartQauntity(-3);
+  ">-3</button>
+
+  <button onclick="
+    updateCartQauntity(-7)
+  ">-7</button>
+
+<script>
+  let cartQuantity = 0;
+
+  function updateCartQauntity(change) {
+    if (cartQuantity + change > 10) {
+      alert('The cart is full')
+      return;
+    }
+
+    if (cartQuantity + change < 0) {
+      alert('Not eough item in the cart')
+      return; 
+    }
+
+
+
+
+    cartQuantity += change
+    console.log(`cartQuantity: ${cartQuantity}`);
+  }
+ 
+  
+</script>
+</body>
+</html>
